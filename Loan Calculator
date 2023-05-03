@@ -1,0 +1,22 @@
+# Loan Calculator Program
+
+# Get the loan amount
+principal = float(input("Enter the loan amount: "))
+
+# Get the interest rate
+interest_rate = float(input("Enter the interest rate: "))
+
+# Get the loan term in years
+loan_term_years = float(input("Enter the loan term (in years): "))
+
+# Calculate the number of months
+loan_term_months = loan_term_years * 12
+
+# Calculate the monthly interest rate
+monthly_interest_rate = interest_rate / 1200
+
+# Calculate the monthly payment
+monthly_payment = principal * monthly_interest_rate / (1 - (1 + monthly_interest_rate) ** (-loan_term_months))
+
+# Display the monthly payment
+print(f"\nMonthly Payment: ${monthly_payment:.2f}")
